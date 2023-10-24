@@ -14,23 +14,23 @@
 // Или же делить на 10 без остатка до тех пока результат не окажется в диапазоне от 100 до 999
 // И надо разделить его с остатком на 10, и получим 3ю цифру.
 
-// Console.WriteLine("Введите любое число");
+Console.WriteLine("Введите любое число");
 
-// int AnyNumber = Convert.ToInt32(Console.ReadLine());
-// // Console.Write("Вы ввели число ");
-// // Console.Write(AnyNumber);
+int AnyNumber = Convert.ToInt32(Console.ReadLine());
+Console.Write("Вы ввели число ");
+Console.Write(AnyNumber);
 
-// int number = 0;
 
-// // for (int i = 0; i <= AnyNumber; i++)
-// //     {
-// //     int Result = AnyNumber % 10;
+for (int i = 0; i <= AnyNumber; i++)
+    {
+    int Result = AnyNumber % 10;
     
-// //         while (Result > 100 && Result < 999)
-// //         {    int ThirdNumber = Result / 10;
-// //              Console.Write("Третья цифра введённого числа - ");
-// //              Console.Write(ThirdNumber);
-// //         }
+        while (Result > 100 && Result < 999)
+        {    int ThirdNumber = Result / 10;
+             Console.Write("Третья цифра введённого числа - ");
+             Console.Write(ThirdNumber);
+        }
+    }
 
 
 // //     }
