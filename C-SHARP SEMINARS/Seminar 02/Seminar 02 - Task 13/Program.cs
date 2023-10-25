@@ -15,6 +15,7 @@
 // И надо разделить его с остатком на 10, и получим 3ю цифру.
 
 
+Console.WriteLine("Задача № 13 - определение и вывод в консоль третьей цифры заданного числа");
 ﻿Console.Write("Введите число - ");
 int number = Convert.ToInt32(Console.ReadLine());
 if(number > 99 || number < -99)
