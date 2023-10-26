@@ -21,7 +21,8 @@ Console.WriteLine(" ");
 
 Console.WriteLine("Введите количество элементов массива: ");
 int R = Convert.ToInt32(Console.ReadLine()); // ввод длины массива R с консоли
-double[] randomArray = new double[R]; //double[] - задаётся массив из вещественных чисел; new double[R] - создаётся массив длиной R
+double[] randomArray = new double[R]; //double[] - задаётся массив из вещественных чисел; new double[R] - создаётся 
+                                      // массив длиной R
 
 void arr(int R) // void — тип возвращаемого значения. Это ключевое слово используется для того, чтобы указать, 
                 // что метод не возвращает ничего.
@@ -30,10 +31,10 @@ void arr(int R) // void — тип возвращаемого значения. 
 Random rand = new Random();
         for (int i = 0; i < R; i++)
         {
-            randomArray[i] = rand.NextDouble();
+            randomArray[i] = rand.NextDouble(); // array[i] = new Random().Next(1, 101);
             Console.Write($"{randomArray[i]:F2} "); // F2 - описание формата вывода, 
-                                        // где F - формат c плавающей запятой
-                                        // 2 - кол-во знаков после запятой
+                                                    // где F - формат c плавающей запятой
+                                                    // 2 - кол-во знаков после запятой
         }
 }
 
@@ -70,3 +71,7 @@ Console.Write($"\nРазница между максимальным и мини
 // работе со строками, делает код более читаемым и легко поддерживаемым.
 
 // символ новой строки может быть указан как \n 
+
+// https://ru.stackoverflow.com/questions/1283521/Создать-двумерный-массив-из-вещественных-чисел-с-рандомными-числами-c
+
+// https://blablacode.ru/c_code/1615
