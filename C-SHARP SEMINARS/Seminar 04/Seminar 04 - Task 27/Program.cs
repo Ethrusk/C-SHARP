@@ -4,3 +4,31 @@
 // 9012 -> 12
 
 
+Console.WriteLine("Задача 27 - программа, которая принимает на вход число и выдаёт сумму цифр в числе");
+
+Console.Write("Введите число: ");
+int a = Convert.ToInt32(Console.ReadLine());
+int len = Length(a); // вводим переменную, означающую количество цифр в числе
+Console.Write($"Сумма цифр в числе {a} равна {Sum(a, len)}");
+
+int Length(int a) //метод/функция подсчёта количества цифр в числе (можно ещё считать и суммировать через массив)
+    {
+        int index = 0;
+        while (a > 0)
+            {
+                a /= 10; // a = a/10
+                index++;
+            }
+        return index;
+    }
+
+int Sum(int a, int len)
+    {
+        int sum = 0;
+        for (int i = 1; i <= len; i++)
+            {
+                sum += a % 10; // sum = sum + (a % 10)
+                a /= 10; // a = a/10
+            }
+        return sum;
+    }
