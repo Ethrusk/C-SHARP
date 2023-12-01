@@ -13,21 +13,21 @@ void PrintNaturalNumbers(int m, int n) // Рекурсивный метод вы
     {return;}
 
     Console.Write($"{m}  ");
-    PrintNaturalNumbers( m + 1, n);
+    PrintNaturalNumbers(m + 1, n);
 }
 
 
-Console.WriteLine("Введите значение M: ");
+Console.WriteLine("Введите число M: ");
 int m = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите значение N: ");
+Console.WriteLine("Введите число N: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
 while (m <= 0 || n <=0) // Проверка чисел на натуральность
         {
             Console.WriteLine("Оба числа должны быть натуральными.");
-            Console.WriteLine("Введите значение M: ");
+            Console.WriteLine("Введите число M: ");
             m = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите значение N: ");
+            Console.WriteLine("Введите число N: ");
             n = Convert.ToInt32(Console.ReadLine());
         }
 
