@@ -22,29 +22,30 @@ Console.WriteLine("Задача № 3 - выведение в консоль э�
 
 
 
-void PrintReverseArray (int[] MyArray, int size)
-{
-    if(size <= 1)
-    {return;}
-    else 
-    {
-        int temp;
-        int i=0;
-        temp = MyArray[i];
-        MyArray[i] = MyArray[size-1];
-        MyArray[size-1] = temp;
-        PrintReverseArray (MyArray[i], size-2);
-    }    
-    //     Console.Write(" " + MyArray[i++]);
-    //     // Console.Write(" ");
-    //     PrintArray(MyArray, i);
-    // }
-}
-
-// void Main(string[] args)
+// void PrintReverseArray (int[] MyArray, int size)
 // {
-    int[] MyArray = {1, 2, 5, 0, 10, 34};
-    PrintArray(MyArray);
+//     if(size <= 1)
+//     {return;}
+//     else 
+//     {
+//         int temp;
+//         int i=0;
+//         temp = MyArray[i];
+//         MyArray[i] = MyArray[size-1];
+//         MyArray[size-1] = temp;
+//         PrintReverseArray (MyArray[i], size-2);
+//     }    
+//     //     Console.Write(" " + MyArray[i++]);
+//     //     // Console.Write(" ");
+//     //     PrintArray(MyArray, i);
+//     // }
+// }
+
+
+// // void Main(string[] args)
+// // {
+//     int[] MyArray = {1, 2, 5, 0, 10, 34};
+//     PrintReverseArray(MyArray);
 // }
 //*******************************************************
 
@@ -58,3 +59,40 @@ void PrintReverseArray (int[] MyArray, int size)
 //             }
 //         }
 
+
+//  static void Print2(object[] arr)
+//         {
+//             if (arr.Length == 0) return;
+//             else
+//             {
+//                 Console.Write(" " + arr[0]);
+//                 Print2(arr.Skip(1).ToArray());
+//             }
+//         }
+
+// int[] numbers = { 1, 2, 5, 0, 10, 34 };
+             
+// int n = numbers.Length; // длина массива
+// int k = n / 2;          // середина массива
+// int temp;               // вспомогательный элемент для обмена значениями
+// for(int i=0; i < k; i++)
+// {
+//     temp = numbers[i];
+//     numbers[i] = numbers[n - i - 1];
+//     numbers[n - i - 1] = temp;
+// }
+// foreach(int i in numbers)
+// {
+//     Console.Write($"{i} \t");
+// }
+//*********************************
+
+void PrintReverseArray(int [] MyArray, int i = 0)
+        {
+            if (i < MyArray.Length)
+            {PrintReverseArray(MyArray, i+1);
+            Console.WriteLine(MyArray[i]);}
+        }
+
+int[] MyArray = {1, 2, 5, 0, 10, 34};
+PrintReverseArray(MyArray);
